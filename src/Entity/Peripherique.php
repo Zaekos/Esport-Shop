@@ -34,7 +34,7 @@ class Peripherique
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
-    private $en_avant;
+    private $show;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
@@ -92,14 +92,14 @@ class Peripherique
         return $this;
     }
 
-    public function getEnAvant(): ?bool
+    public function getShow(): ?bool
     {
         return $this->en_avant;
     }
 
-    public function setEnAvant(bool $en_avant): self
+    public function setShow(bool $show): self
     {
-        $this->en_avant = $en_avant;
+        $this->show = $show;
 
         return $this;
     }

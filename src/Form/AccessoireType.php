@@ -43,7 +43,7 @@ class AccessoireType extends AbstractType
                 // dans le select du html
                 'choice_label' => 'Equipe',
             ])
-            ->add('en_avant', CheckboxType::class, [
+            ->add('show', CheckboxType::class, [
                 'label' => 'Mis en avant',
                 'required' => true
             ])
