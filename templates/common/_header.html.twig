@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Esport-Shop !</title>
+    <link rel="stylesheet" href="{{ asset ('css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <nav id="myHeader">
+        <div class="header" >
+            <div class="logo">
+                <h1>ESPORT-SHOP</h1>
+                <p>Available now !</p>
+            </div>
+            <div class="searchbar">
+                <form action = "verif-form.php" method = "get">
+                    <input type = "search" name = "search">
+                    <input type = "submit" name = "submit" value = "Rechercher">
+                </form>
+            </div>
+            <div class="client">
+                <div class="compte">
+                    <a href="">
+                        <div class="logoflat">
+                        <img src="{{ asset ('img/compte.png') }}" alt="" class="resp">
+                        </div>
+                        Compte
+                    </a>
+                </div>
+                <div class="commande">
+                    <a href="">
+                        <div class="logoflat">
+                        <img src="{{ asset ('img/commande.png') }}" alt="" class="resp">
+                        </div>
+                        Commandes
+                    </a>
+                </div>
+                <div class="panier">
+                    <a href="">
+                        <div class="logoflat">
+                        <img src="{{ asset ('img/panier.png') }}" alt="" class="resp">
+                        </div>
+                        Panier
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    <div class="team">
+        <div class="logoEquipe">
+            <a href=""><img src="{{ asset ('img/solary_logo.png') }}" alt="Equipe Solary" class="resp"></a>
+        </div>
+        <div class="logoEquipe">
+            <a href=""><img src="{{ asset ('img/vitality_logo.png') }}" alt="Equipe Vitality" class="resp"></a>
+        </div>
+        <div class="logoEquipe">
+            <a href=""><img src="{{ asset ('img/lestream_logo.png') }}" alt="Equipe LeStream" class="resp"></a>
+        </div>
+    </div>
+    <div class="menu">
+        <a class="sousmenu" href="">Vêtement</a>
+        <a class="sousmenu" href="">Périphérique</a>
+        <a class="sousmenu" href="">Accessoire</a>
+    </div>
+    </nav>
+</header>
+

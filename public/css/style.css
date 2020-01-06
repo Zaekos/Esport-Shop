@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Quantum';
+    src:    url( {{asset('fonts/Quantum.otf')}} ) format('opentype');
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+         /* HEADER */
+header a {
+    text-decoration: none;
+    color: #408DD7;
+    font-size: 18px;
+
+}
+
+
+.header {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    background-color: #202020;
+
+}
+.logo {
+    width: 30%;
+}
+.logo h1 {
+    font-family: 'Quantum';
+    font-size: 34px;
+    color: #408DD7;
+}
+.searchbar {
+    width: 30%;
+    margin-top: 10px;
+}
+
+.client {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+
+}
+.logoflat {
+    width: 25%;
+}
+
+.header h1 {
+    margin: 0;
+}
+.header p {
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.team {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #333333;
+}
+.logoEquipe {
+    width: 5%;
+    margin-right: 50px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #444444;
+}
+.sousmenu {
+    padding: 5px 30px;
+
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+       /* FIN HEADER */
+       /* RESPONSIVE */
+.resp {
+    width: 100%;
+    height: auto;
+}
+     /* FIN RESPONSIVE */
+        /* ACCUEIL */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+.carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 30%;
+    border: 3px solid black;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+      /* FIN ACCUEIL */
+        /* VITALITY */
+.homeVitality {
+    background-image: url('../img/home_vitality.jpeg');
+    background-size: cover;
+    opacity: 0.90;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+
+}
+      /* FIN VITALITY */
+        /* SOLARY */
+.homeSolary {
+    background-image: url('../img/home_solary.jpg');
+    background-size: cover;
+    opacity: 0.90;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+      /* FIN SOLARY */
+       /* LESTREAM */
+.homeLestream {
+    background-image: url('../img/home_lestream.jpg');
+    background-size: cover;
+    opacity: 0.90;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+     /* FIN LESTREAM */
+         /* FOOTER */
+
+footer {
+    background-color: #333333;
+}
+.up {
+    background-color: #444444;
+    text-align: center;
+    padding: 20px;
+
+
+
+}
+.up a {
+    text-decoration: none;
+    color: #408DD7;
+
+
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.sousfooter {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+
+.sousfooter a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+
+}
+.sousfooter p {
+    color: #408DD7;
+
+    font-size: 18px;
+}
+.titreinfosite p {
+    color: #408DD7;
+    text-align: center;
+
+}
+.infosite {
+    display: flex;
+    justify-content: space-between;
+    background-color: #202020;
+}
+.textinfosite {
+    padding: 5px;
+    color: white;
+
+}
+        /* FIN FOOTER */
