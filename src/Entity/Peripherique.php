@@ -34,7 +34,7 @@ class Peripherique
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
-    private $show;
+    private $IsVisible;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
@@ -92,14 +92,14 @@ class Peripherique
         return $this;
     }
 
-    public function getShow(): ?bool
+    public function getIsVisible(): ?bool
     {
-        return $this->en_avant;
+        return $this->IsVisible;
     }
 
-    public function setShow(bool $show): self
+    public function setIsVisible(bool $IsVisible): self
     {
-        $this->show = $show;
+        $this->IsVisible = $IsVisible;
 
         return $this;
     }
@@ -127,4 +127,21 @@ class Peripherique
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getEquipe()
+    {
+        return $this->equipe;
+    }
+
+    /**
+     * @param mixed $equipe
+     */
+    public function setEquipe($equipe): void
+    {
+        $this->equipe = $equipe;
+    }
+
 }

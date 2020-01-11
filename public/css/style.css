@@ -12,16 +12,22 @@ body {
 
 
 }
+main {
+    background-color: lightgrey;
+}
          /* HEADER */
-header a {
+a {
     text-decoration: none;
     color: #408DD7;
     font-size: 18px;
 
 }
+a:hover {
+    color: white;
+}
 
 
-.header {
+.headerMenu {
     padding-top: 10px;
     display: flex;
     justify-content: space-evenly;
@@ -52,10 +58,10 @@ header a {
     width: 25%;
 }
 
-.header h1 {
+.headerMenu h1 {
     margin: 0;
 }
-.header p {
+.headerMenu p {
     font-weight: bold;
     margin: 0;
 }
@@ -112,7 +118,52 @@ section {
     align-items: center;
     margin-bottom: 10px;
 }
+
+.bienvenue {
+    font-size: 34px;
+    padding: 10px ;
+    text-align: center;
+
+}
+.presentation {
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
       /* FIN ACCUEIL */
+       /* VETEMENT */
+.titre {
+    color: #408DD7;
+    padding: 10px;
+    margin: auto;
+    font-size: 34px;
+    width: 200px;
+    border-radius: 25px;
+}
+.articleListImg {
+    border: solid 2px #408DD7;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: white;
+
+}
+.imgArticle {
+    width: 110px;
+    margin: auto;
+
+}
+.articleList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #408DD7;
+    background-color: lightgrey;
+    padding: 10px 0px;
+
+}
+
+     /* FIN VETEMENT */
         /* VITALITY */
 .homeVitality {
     background-image: url('../img/home_vitality.jpeg');

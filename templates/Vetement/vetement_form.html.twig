@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{# je crée le html de mon formulaire (balise form, input etc) en utilisant la fonction
+ form() avec en parametre ma variable de formulaire  #}
+{#{{ form(vetementFormView) }}#}
+
+
+{% block content %}
+
+    {# j'utilise la fonction form_start pour insérer la balise form #}
+    {{ form_start(vetementFormView, { 'attr': {'class': 'vetement_form'} }) }}
+
+    {# j'utilise les fonctions form_errors, form_label et form_widget
+     pour afficher respectivement les erreurs, le label et l'input pour
+     mon champs title #}
+    {{ form_errors(vetementFormView.name, { 'attr': {'class': 'vetement_input_name'} }) }}
+    {{ form_label(vetementFormView.name, 'Nom', { 'label_attr': {'class': 'vetement_input_name'} }) }}
+
+    {# j'utilise le parametre 'attr' pour pouvoir attribuer une classe css
+     à mon input #}
+    {{ form_widget(vetementFormView.name, { 'attr': {'class': 'vetement_input'} }) }}
+
+    {{ form_errors(vetementFormView.price, { 'attr': {'class': 'vetement_input_price'} }) }}
+    {{ form_label(vetementFormView.price, 'Prix',{ 'label_attr': {'class': 'vetement_input_price'} }) }}
+    {{ form_widget(vetementFormView.price, { 'attr': {'class': 'vetement_input'} }) }}
+
+    {{ form_errors(vetementFormView.description, { 'attr': {'class': 'vetement_input_description'} }) }}
+    {{ form_label(vetementFormView.description, 'Description', { 'label_attr': {'class': 'vetement_input_description'} }) }}
+    {{ form_widget(vetementFormView.description, { 'attr': {'class': 'vetement_input'} }) }}
+
+    {{ form_errors(vetementFormView.taille_vetement, { 'attr': {'class': 'vetement_input_tailleVetement'} }) }}
+    {{ form_label(vetementFormView.taille_vetement, 'Taille', { 'label_attr': {'class': 'vetement_input_tailleVetement'} }) }}
+    {{ form_widget(vetementFormView.taille_vetement, { 'attr': {'class': 'vetement_input_ddwidget'} }) }}
+
+    {{ form_errors(vetementFormView.equipe, { 'attr': {'class': 'vetement_input_equipe'} }) }}
+    {{ form_label(vetementFormView.equipe, 'Equipe', { 'label_°attr': {'class': 'vetement_input_equipe'} }) }}
+    {{ form_widget(vetementFormView.equipe, { 'attr': {'class': 'vetement_input_bwidget'} }) }}
+
+    {{ form_errors(vetementFormView.created_at, { 'attr': {'class': 'vetement_input_createdAt'} }) }}
+    {{ form_label(vetementFormView.created_at, 'Crée à', { 'label_°attr': {'class': 'vetement_input_createdAt'} }) }}
+    {{ form_widget(vetementFormView.created_at, { 'attr': {'class': 'vetement_input_bwidget'} }) }}
+
+    {{ form_errors(vetementFormView.is_visible, { 'attr': {'class': 'vetement_input_show'} }) }}
+    {{ form_label(vetementFormView.is_visible, 'En avant', { 'label_°attr': {'class': 'vetement_input_show'} }) }}
+    {{ form_widget(vetementFormView.is_visible, { 'attr': {'class': 'vetement_input_bwidget'} }) }}
+
+    {{ form_errors(vetementFormView.in_stock, { 'attr': {'class': 'vetement_input_inStock'} }) }}
+    {{ form_label(vetementFormView.in_stock, 'Disponible', { 'label_°attr': {'class': 'vetement_input_inStock'} }) }}
+    {{ form_widget(vetementFormView.in_stock, { 'attr': {'class': 'vetement_input_bwidget'} }) }}
+
+    {{ form_label(vetementFormView.Envoyer, 'Envoyer', { 'label_attr': {'class': 'vetement_input_envoyer'} }) }}
+    {{ form_widget(vetementFormView.Envoyer, { 'attr': {'class': 'vetement_input_envoyer'} }) }}
+
+    {# j'utilise la fonction form_end pour insérer la fermeture de la balise form #}
+
+    {{ form_end(vetementFormView) }}
+
+{% endblock %}

@@ -19,22 +19,23 @@ class TailleVetement
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $libellé;
+    private $libelle;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getLibellé(): ?string
+    public function getLibelle(): ?string
     {
-        return $this->libellé;
+        return $this->libelle;
     }
 
-    public function setLibellé(?string $libellé): self
+    public function setLibelle(?string $libelle): self
     {
-        $this->libellé = $libellé;
+        $this->libellé = $libelle;
 
         return $this;
     }
+
 }

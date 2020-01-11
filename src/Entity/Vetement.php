@@ -32,11 +32,6 @@ class Vetement
     private $description;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
-     */
-    private $en_avant;
-
-    /**
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $created_at;
@@ -55,6 +50,12 @@ class Vetement
      * @ORM\ManyToOne(targetEntity="App\Entity\TailleVetement")
      */
     private $taille_vetement;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $IsVisible;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -96,18 +97,6 @@ class Vetement
         return $this;
     }
 
-    public function getEnAvant(): ?bool
-    {
-        return $this->en_avant;
-    }
-
-    public function setEnAvant(bool $en_avant): self
-    {
-        $this->en_avant = $en_avant;
-
-        return $this;
-    }
-
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->created_at;
@@ -131,4 +120,50 @@ class Vetement
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getEquipe()
+    {
+        return $this->equipe;
+    }
+
+    /**
+     * @param mixed $equipe
+     */
+    public function setEquipe($equipe): void
+    {
+        $this->equipe = $equipe;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTailleVetement()
+    {
+        return $this->taille_vetement;
+    }
+
+    /**
+     * @param mixed $taille_vetement
+     */
+    public function setTailleVetement($taille_vetement): void
+    {
+        $this->taille_vetement = $taille_vetement;
+    }
+
+    public function getIsVisible(): ?bool
+    {
+        return $this->IsVisible;
+    }
+
+    public function setIsVisible(?bool $IsVisible): self
+    {
+        $this->IsVisible = $IsVisible;
+
+        return $this;
+    }
+    
+
 }

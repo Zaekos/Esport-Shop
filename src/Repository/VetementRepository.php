@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Vetement;
+
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -18,6 +19,7 @@ class VetementRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Vetement::class);
     }
+
 
     // /**
     //  * @return Vetement[] Returns an array of Vetement objects

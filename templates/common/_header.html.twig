@@ -8,12 +8,11 @@
     <title>Esport-Shop !</title>
     <link rel="stylesheet" href="{{ asset ('css/style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
-
 </head>
 <body>
 <header>
     <nav id="myHeader">
-        <div class="header" >
+        <div class="headerMenu" >
             <div class="logo">
                 <h1>ESPORT-SHOP</h1>
                 <p>Available now !</p>
@@ -64,7 +63,7 @@
         </div>
     </div>
     <div class="menu">
-        <a class="sousmenu" href="">Vêtement</a>
+        <a class="sousmenu" href="{{ path ('vetement') }}">Vêtement</a>
         <a class="sousmenu" href="">Périphérique</a>
         <a class="sousmenu" href="">Accessoire</a>
     </div>

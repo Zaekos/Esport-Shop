@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <main>
+        <div class="liste">
+            <img src="{{ asset ('img/vetement/'~vetement.id~'.jpg')}}" alt="{{ vetement.name }}" class="resp">
+             {{ vetement.name }} {{ vetement.price }}  {{ vetement.description }}
+        </div>
+    </main>
+{% endblock %}

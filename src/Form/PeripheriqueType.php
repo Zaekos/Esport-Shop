@@ -4,11 +4,11 @@ namespace App\Form;
 
 use App\Entity\Equipe;
 use App\Entity\Peripherique;
-use Doctrine\DBAL\Types\FloatType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,7 +23,7 @@ class PeripheriqueType extends AbstractType
                 'required' => true,
                 'label' => 'Nom'
             ])
-            ->add('price', FloatType::class, [
+            ->add('price', NumberType::class, [
                 'required' => true,
                 'label' => 'Prix'
             ])
@@ -41,7 +41,7 @@ class PeripheriqueType extends AbstractType
                 'class' => Equipe::class,
                 // je choisi la propriété d'Author qui s'affiche
                 // dans le select du html
-                'choice_label' => 'Equipe',
+                'choice_label' => 'libelle',
             ])
             ->add('show', CheckboxType::class, [
                 'label' => 'Mis en avant',
