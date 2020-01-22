@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <main class="articleMain">
+
+        <div class="articleCarte">
+            <div class="articleImgCarte">
+                <img src="{{ asset ('img/accessoire/'~accessoire.id~'.jpg')}}" alt="{{ accessoire.name }}" class="resp">
+            </div>
+            <div class="articleDetailCarte">
+                <div class="articleNomCarte">
+                    {{ accessoire.name }}
+                </div>
+                <div class="articleDescCarte">
+                    {{ accessoire.description }}
+                </div>
+                <div class="articlePrixTailleCarte">
+                    <div class="articlePrixCarte">
+                        {{ accessoire.price }} €
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="articleAjout">
+            <a href="">Ajouter au panier</a>
+        </div>
+    </main>
+{% endblock %}
+

@@ -1,0 +1,34 @@
+{% extends 'baseadmin.html.twig' %}
+    {% block content %}
+        <main>
+            <div class="titre">ACCESSOIRE</div>
+
+            {% for accessoire in accessoires %}
+                <article class="articleList">
+                    <div class="articleListImg">
+                        <div class="imgArticle">
+                            <img src="{{ asset ('img/accessoire/'~accessoire.id~'.jpg')}}" alt="{{ accessoire.name }}" class="resp">
+                        </div>
+                        <div>
+                            <div>
+                                <a href="{{ path ('accessoireid', {'id':accessoire.id}) }}">{{ accessoire.name }} </a>
+                                <div>
+                                    <a href="{{ path ('accessoire_update', {'id':accessoire.id}) }}">Update</a>
+                                </div>
+                                <div>
+                                    <a href="{{ path ('accessoire_delete', {'id':accessoire.id}) }}">Supprimer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleListPrix">
+                        {{ accessoire.price }} €
+                    </div>
+                </article>
+            {% endfor %}
+            <div class="ajout">
+                <a href="{{ path('accessoire_insert') }}">Ajouter un accessoire</a>
+            </div>
+        </main>
+
+    {% endblock %}

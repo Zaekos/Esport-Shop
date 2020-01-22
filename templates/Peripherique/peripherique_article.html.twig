@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <main>
+        <div class="liste">
+
+
+        </div>
+    </main>
+    <main class="articleMain">
+        <div class="articleCarte">
+            <div class="articleImgCarte">
+                <img src="{{ asset ('img/peripherique/'~peripherique.id~'.jpg')}}" alt="{{ peripherique.name }}" class="resp">
+            </div>
+            <div class="articleDetailCarte">
+                <div class="articleNomCarte">
+                    {{ peripherique.name }}
+                </div>
+                <div class="articleDescCarte">
+                    {{ peripherique.description }}
+                </div>
+                <div class="articlePrixTailleCarte">
+                    <div class="articlePrixCarte">
+                        {{ peripherique.price }} €
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="articleAjout">
+            <a href="">Ajouter au panier</a>
+        </div>
+    </main>
+{% endblock %}

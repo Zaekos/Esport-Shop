@@ -1,0 +1,54 @@
+{% extends 'baseadmin.html.twig' %}
+
+{# je crée le html de mon formulaire (balise form, input etc) en utilisant la fonction
+ form() avec en parametre ma variable de formulaire  #}
+{#{{ form(peripheriqueFormView) }}#}
+
+
+{% block content %}
+
+    {# j'utilise la fonction form_start pour insérer la balise form #}
+    {{ form_start(peripheriqueFormView, { 'attr': {'class': 'peripherique_form'} }) }}
+
+    {# j'utilise les fonctions form_errors, form_label et form_widget
+     pour afficher respectivement les erreurs, le label et l'input pour
+     mon champs title #}
+    {{ form_errors(peripheriqueFormView.name, { 'attr': {'class': 'peripherique_input_name'} }) }}
+    {{ form_label(peripheriqueFormView.name, 'Nom', { 'label_attr': {'class': 'peripherique_input_name'} }) }}
+
+    {# j'utilise le parametre 'attr' pour pouvoir attribuer une classe css
+     à mon input #}
+    {{ form_widget(peripheriqueFormView.name, { 'attr': {'class': 'peripherique_input'} }) }}
+
+    {{ form_errors(peripheriqueFormView.price, { 'attr': {'class': 'peripherique_input_price'} }) }}
+    {{ form_label(peripheriqueFormView.price, 'Prix',{ 'label_attr': {'class': 'peripherique_input_price'} }) }}
+    {{ form_widget(peripheriqueFormView.price, { 'attr': {'class': 'peripherique_input'} }) }}
+
+    {{ form_errors(peripheriqueFormView.description, { 'attr': {'class': 'peripherique_input_description'} }) }}
+    {{ form_label(peripheriqueFormView.description, 'Description', { 'label_attr': {'class': 'aperipherique_input_description'} }) }}
+    {{ form_widget(peripheriqueFormView.description, { 'attr': {'class': 'peripherique_input'} }) }}
+
+    {{ form_errors(peripheriqueFormView.equipe, { 'attr': {'class': 'peripherique_input_equipe'} }) }}
+    {{ form_label(peripheriqueFormView.equipe, 'Equipe', { 'label_°attr': {'class': 'peripherique_input_equipe'} }) }}
+    {{ form_widget(peripheriqueFormView.equipe, { 'attr': {'class': 'peripherique_input_bwidget'} }) }}
+
+    {{ form_errors(peripheriqueFormView.created_at, { 'attr': {'class': 'peripherique_input_createdAt'} }) }}
+    {{ form_label(peripheriqueFormView.created_at, 'Crée à', { 'label_°attr': {'class': 'peripherique_input_createdAt'} }) }}
+    {{ form_widget(peripheriqueFormView.created_at, { 'attr': {'class': 'peripherique_input_bwidget'} }) }}
+
+    {{ form_errors(peripheriqueFormView.is_visible, { 'attr': {'class': 'peripherique_input_show'} }) }}
+    {{ form_label(peripheriqueFormView.is_visible, 'En avant', { 'label_°attr': {'class': 'peripherique_input_show'} }) }}
+    {{ form_widget(peripheriqueFormView.is_visible, { 'attr': {'class': 'peripherique_input_bwidget'} }) }}
+
+    {{ form_errors(peripheriqueFormView.in_stock, { 'attr': {'class': 'peripherique_input_inStock'} }) }}
+    {{ form_label(peripheriqueFormView.in_stock, 'Disponible', { 'label_°attr': {'class': 'peripherique_input_inStock'} }) }}
+    {{ form_widget(peripheriqueFormView.in_stock, { 'attr': {'class': 'peripherique_input_bwidget'} }) }}
+
+    {{ form_label(peripheriqueFormView.Envoyer, 'Envoyer', { 'label_attr': {'class': 'peripherique_input_envoyer'} }) }}
+    {{ form_widget(peripheriqueFormView.Envoyer, { 'attr': {'class': 'peripherique_input_envoyer'} }) }}
+
+    {# j'utilise la fonction form_end pour insérer la fermeture de la balise form #}
+
+    {{ form_end(peripheriqueFormView) }}
+
+{% endblock %}

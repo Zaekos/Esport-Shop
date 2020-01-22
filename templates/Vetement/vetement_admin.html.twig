@@ -1,0 +1,34 @@
+{% extends 'baseadmin.html.twig' %}
+    {% block content %}
+        <main>
+            <div class="titre">VETEMENT</div>
+
+            {% for vetement in vetements %}
+                <article class="articleList">
+                    <div class="articleListImg">
+                        <div class="imgArticle">
+                            <img src="{{ asset ('img/vetement/'~vetement.id~'.jpg')}}" alt="{{ vetement.name }}" class="resp">
+                        </div>
+                        <div>
+                            <div>
+                                <a href="{{ path ('vetementid', {'id':vetement.id}) }}">{{ vetement.name }} </a>
+                                <div>
+                                    <a href="{{ path ('vetement_update', {'id':vetement.id}) }}">Update</a>
+                                </div>
+                                <div>
+                                    <a href="{{ path ('vetement_delete', {'id':vetement.id}) }}">Supprimer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleListPrix">
+                        {{ vetement.price }} €
+                    </div>
+                </article>
+            {% endfor %}
+            <div class="ajout">
+                <a href="{{ path('vetement_insert') }}">Ajouter un vêtement</a>
+            </div>
+        </main>
+
+    {% endblock %}

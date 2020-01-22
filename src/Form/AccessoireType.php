@@ -43,17 +43,17 @@ class AccessoireType extends AbstractType
                 // dans le select du html
                 'choice_label' => 'libelle',
             ])
-            ->add('show', CheckboxType::class, [
+            ->add('is_visible', CheckboxType::class, [
                 'label' => 'Mis en avant',
-                'required' => true
+
             ])
             ->add('created_at', DateType::class, [
                 'years' => range(date('Y'), date('Y') - 500),
-                'required'=>true,
+
                 'label' => 'Crée à'])
             ->add('in_stock', CheckboxType::class, [
                 'label' => 'Disponible',
-                'required' => true
+
             ])
             ->add('Envoyer', SubmitType::class)
         ;
@@ -62,7 +62,7 @@ class AccessoireType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Peripherique::class,
+            'data_class' => Accessoire::class,
         ]);
     }
 }

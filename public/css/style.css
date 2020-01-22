@@ -16,16 +16,23 @@ main {
     background-color: lightgrey;
 }
          /* HEADER */
+
 a {
     text-decoration: none;
     color: #408DD7;
     font-size: 18px;
 
 }
-a:hover {
+.myHeader a:hover {
     color: white;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+}
 
 .headerMenu {
     padding-top: 10px;
@@ -33,12 +40,11 @@ a:hover {
     justify-content: space-evenly;
     color: white;
     background-color: #202020;
-
 }
 .logo {
     width: 30%;
 }
-.logo h1 {
+.logo h1 a {
     font-family: 'Quantum';
     font-size: 34px;
     color: #408DD7;
@@ -51,8 +57,26 @@ a:hover {
 .client {
     display: flex;
     width: 30%;
-    justify-content: space-around;
 
+
+}
+.compte {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.commande {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.panier {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .logoflat {
     width: 25%;
@@ -87,11 +111,11 @@ a:hover {
 
 }
 .sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
+
     width: 100%;
-    z-index: 99;
+
 }
 
        /* FIN HEADER */
@@ -108,44 +132,54 @@ section {
     justify-content: space-evenly;
     padding-top: 10px;
 }
-.carte {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 30%;
-    border: 3px solid black;
-    border-radius: 10px;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.bienvenue {
-    font-size: 34px;
-    padding: 10px ;
-    text-align: center;
-
-}
-.presentation {
-    width: 30%;
+.nouveaute {
+    color: #408DD7;
     padding: 10px;
-    text-align: center;
-    margin: auto;
+    font-size: 34px;
 }
+.titreAccueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgCoeur {
+    width: 40px;
+}
+
+.ajout {
+    color: #408DD7;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.mainAdmin {
+    display: flex;
+    justify-content: center;
+}
+.messageAdmin {
+
+    text-align: center;
+    font-size: 24px;
+    width: 50%;
+    padding: 10px;
+}
+
       /* FIN ACCUEIL */
-       /* VETEMENT */
+       /* ARTICLE */
 .titre {
     color: #408DD7;
     padding: 10px;
     margin: auto;
     font-size: 34px;
     width: 200px;
-    border-radius: 25px;
+
 }
+
 .articleListImg {
     border: solid 2px #408DD7;
     border-radius: 25px;
     padding: 10px;
     background-color: white;
+
 
 }
 .imgArticle {
@@ -160,10 +194,70 @@ section {
     color: #408DD7;
     background-color: lightgrey;
     padding: 10px 0px;
+}
+.articleListPrix {
+    color: red;
+}
+.articleMain {
+    padding: 50px 0px;
+}
+.articleCarte {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+    border: solid 2px #408DD7;
+    padding: 30px;
+    background-color: white;
+    border-radius: 25px;
+}
+.articleImgCarte{
+    width: 20%;
+    height: auto;
 
 }
+.articleDetailCarte {
+    width: 50%;
+}
+.articleNomCarte {
+    text-align: center;
+    padding: 10px;
+    border: solid 2px #408DD7;
+    border-radius: 25px;
+}
+.articleDescCarte {
+    padding: 10px;
+    border: solid 2px #408DD7;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+.articlePrixTailleCarte {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.articlePrixCarte {
+    padding: 10px;
+    border: solid 2px #408DD7;
+    margin-top: 10px;
+    color: red;
+    border-radius: 25px;
+}
+.articleTailleCarte {
+    padding: 10px;
+    border: solid 2px #408DD7;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+.articleAjout {
+    text-align: center;
+    padding-top: 10px;
+}
+.articleImgCarteResp {
+    display: none;
+}
 
-     /* FIN VETEMENT */
+     /* FIN ARTICLE */
         /* VITALITY */
 .homeVitality {
     background-image: url('../img/home_vitality.jpeg');
@@ -260,3 +354,62 @@ footer {
 
 }
         /* FIN FOOTER */
+        /* DEBUT IPAD */
+
+@media screen and (max-width:1199px) and
+(min-width:768px) and (orientation:landscape) {
+
+.logoflat img {
+    display: none;
+}
+.client {
+    display: flex;
+    flex-direction: column;
+}
+.articleCarte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articleImgCarte{
+    width: 50%;
+    height: auto;
+}
+.articleDetailCarte {
+    width: 100%;
+}
+}
+
+         /* FIN IPAD */
+       /* DEBUT IPHONE */
+
+@media screen and (min-width:375px) and (max-width:767px) {
+
+.logoEquipe {
+    width: 10%;
+    margin-right: 50px;
+}
+.logoflat img {
+    display: none;
+}
+.client {
+    display: flex;
+    flex-direction: column;
+}
+.articleCarte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articleImgCarte{
+    width: 100%;
+    height: auto;
+}
+.imgCoeur {
+    width: 100px;
+}
+.articleDetailCarte {
+    width: 100%;
+}
+}
+          /* FIN IPHONE */

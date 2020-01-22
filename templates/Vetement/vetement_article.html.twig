@@ -1,9 +1,36 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-    <main>
-        <div class="liste">
-            <img src="{{ asset ('img/vetement/'~vetement.id~'.jpg')}}" alt="{{ vetement.name }}" class="resp">
-             {{ vetement.name }} {{ vetement.price }}  {{ vetement.description }}
+    <main class="articleMain">
+        <div class="articleCarte">
+            <div class="articleImgCarte">
+                <img src="{{ asset ('img/vetement/'~vetement.id~'.jpg')}}" alt="{{ vetement.name }}" class="resp">
+            </div>
+            <div class="articleDetailCarte">
+                <div class="articleNomCarte">
+                    {{ vetement.name }}
+                </div>
+                <div class="articleDescCarte">
+                    {{ vetement.description }}
+                </div>
+                <div class="articlePrixTailleCarte">
+                    <div class="articlePrixCarte">
+                        {{ vetement.price }} €
+                    </div>
+                    <div class="articleTailleCarte">
+                        Taille
+                        <select type="text" id="taille" name="Taille">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="articleAjout">
+            <a href="">Ajouter au panier</a>
         </div>
     </main>
 {% endblock %}
+

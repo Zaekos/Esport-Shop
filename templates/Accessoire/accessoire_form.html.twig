@@ -1,0 +1,54 @@
+{% extends 'baseadmin.html.twig' %}
+
+{# je crée le html de mon formulaire (balise form, input etc) en utilisant la fonction
+ form() avec en parametre ma variable de formulaire  #}
+{#{{ form(accessoireFormView) }}#}
+
+
+{% block content %}
+
+    {# j'utilise la fonction form_start pour insérer la balise form #}
+    {{ form_start(accessoireFormView, { 'attr': {'class': 'accessoire_form'} }) }}
+
+    {# j'utilise les fonctions form_errors, form_label et form_widget
+     pour afficher respectivement les erreurs, le label et l'input pour
+     mon champs title #}
+    {{ form_errors(accessoireFormView.name, { 'attr': {'class': 'accessoire_input_name'} }) }}
+    {{ form_label(accessoireFormView.name, 'Nom', { 'label_attr': {'class': 'accessoire_input_name'} }) }}
+
+    {# j'utilise le parametre 'attr' pour pouvoir attribuer une classe css
+     à mon input #}
+    {{ form_widget(accessoireFormView.name, { 'attr': {'class': 'accessoire_input'} }) }}
+
+    {{ form_errors(accessoireFormView.price, { 'attr': {'class': 'accessoire_input_price'} }) }}
+    {{ form_label(accessoireFormView.price, 'Prix',{ 'label_attr': {'class': 'accessoire_input_price'} }) }}
+    {{ form_widget(accessoireFormView.price, { 'attr': {'class': 'accessoire_input'} }) }}
+
+    {{ form_errors(accessoireFormView.description, { 'attr': {'class': 'accessoire_input_description'} }) }}
+    {{ form_label(accessoireFormView.description, 'Description', { 'label_attr': {'class': 'accessoire_input_description'} }) }}
+    {{ form_widget(accessoireFormView.description, { 'attr': {'class': 'accessoire_input'} }) }}
+
+    {{ form_errors(accessoireFormView.equipe, { 'attr': {'class': 'accessoire_input_equipe'} }) }}
+    {{ form_label(accessoireFormView.equipe, 'Equipe', { 'label_°attr': {'class': 'accessoire_input_equipe'} }) }}
+    {{ form_widget(accessoireFormView.equipe, { 'attr': {'class': 'accessoire_input_bwidget'} }) }}
+
+    {{ form_errors(accessoireFormView.created_at, { 'attr': {'class': 'accessoire_input_createdAt'} }) }}
+    {{ form_label(accessoireFormView.created_at, 'Crée à', { 'label_°attr': {'class': 'accessoire_input_createdAt'} }) }}
+    {{ form_widget(accessoireFormView.created_at, { 'attr': {'class': 'accessoire_input_bwidget'} }) }}
+
+    {{ form_errors(accessoireFormView.is_visible, { 'attr': {'class': 'accessoire_input_show'} }) }}
+    {{ form_label(accessoireFormView.is_visible, 'En avant', { 'label_°attr': {'class': 'accessoire_input_show'} }) }}
+    {{ form_widget(accessoireFormView.is_visible, { 'attr': {'class': 'accessoire_input_bwidget'} }) }}
+
+    {{ form_errors(accessoireFormView.in_stock, { 'attr': {'class': 'accessoire_input_inStock'} }) }}
+    {{ form_label(accessoireFormView.in_stock, 'Disponible', { 'label_°attr': {'class': 'accessoire_input_inStock'} }) }}
+    {{ form_widget(accessoireFormView.in_stock, { 'attr': {'class': 'accessoire_input_bwidget'} }) }}
+
+    {{ form_label(accessoireFormView.Envoyer, 'Envoyer', { 'label_attr': {'class': 'accessoire_input_envoyer'} }) }}
+    {{ form_widget(accessoireFormView.Envoyer, { 'attr': {'class': 'accessoire_input_envoyer'} }) }}
+
+    {# j'utilise la fonction form_end pour insérer la fermeture de la balise form #}
+
+    {{ form_end(accessoireFormView) }}
+
+{% endblock %}

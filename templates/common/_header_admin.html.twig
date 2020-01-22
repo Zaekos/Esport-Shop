@@ -20,13 +20,13 @@
                 <h1><a href="{{ path ('accueil') }}">ESPORT-SHOP</a></h1>
                 <p>Available now !</p>
             </div>
+
             <div class="client">
                 <div class="compte">
                     <div class="logoflat">
                         <img src="{{ asset ('img/compte.png') }}" alt="" class="resp">
                     </div>
                     <a href="{{ path ('compte') }}">
-
                         Compte
                     </a>
                 </div>
@@ -49,22 +49,21 @@
 
             </div>
         </div>
-    <div class="team">
-        <div class="logoEquipe">
-            <a href=""><img src="{{ asset ('img/solary_logo.png') }}" alt="Equipe Solary" class="resp"></a>
+        <div class="team">
+            <div class="logoEquipe">
+                <a href=""><img src="{{ asset ('img/solary_logo.png') }}" alt="Equipe Solary" class="resp"></a>
+            </div>
+            <div class="logoEquipe">
+                <a href=""><img src="{{ asset ('img/vitality_logo.png') }}" alt="Equipe Vitality" class="resp"></a>
+            </div>
+            <div class="logoEquipe">
+                <a href=""><img src="{{ asset ('img/lestream_logo.png') }}" alt="Equipe LeStream" class="resp"></a>
+            </div>
         </div>
-        <div class="logoEquipe">
-            <a href=""><img src="{{ asset ('img/vitality_logo.png') }}" alt="Equipe Vitality" class="resp"></a>
+        <div class="menu">
+            <a class="sousmenu" href="{{ path ('vetement_admin') }}">Vêtement</a>
+            <a class="sousmenu" href="{{ path ('peripherique_admin') }}">Périphérique</a>
+            <a class="sousmenu" href="{{ path ('accessoire_admin') }}">Accessoire</a>
         </div>
-        <div class="logoEquipe">
-            <a href=""><img src="{{ asset ('img/lestream_logo.png') }}" alt="Equipe LeStream" class="resp"></a>
-        </div>
-    </div>
-    <div class="menu">
-        <a class="sousmenu" href="{{ path ('vetement') }}">Vêtement</a>
-        <a class="sousmenu" href="{{ path ('peripherique') }}">Périphérique</a>
-        <a class="sousmenu" href="{{ path ('accessoire') }}">Accessoire</a>
-    </div>
     </nav>
 </header>
-

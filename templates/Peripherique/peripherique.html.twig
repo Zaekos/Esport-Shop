@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+    {% block content %}
+        <main>
+            <div class="titre">PERIPHERIQUE</div>
+
+            {% for peripherique in peripheriques %}
+                <article class="articleList">
+                    <div class="articleListImg">
+                        <div class="imgArticle">
+                            <img src="{{ asset ('img/peripherique/'~peripherique.id~'.jpg')}}" alt="{{ peripherique.name }}" class="resp">
+                        </div>
+                        <div>
+                            <div>
+                                <a href="{{ path ('peripheriqueid', {'id':peripherique.id}) }}">{{ peripherique.name }} </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleListPrix">
+                        {{ peripherique.price }} €
+                    </div>
+                </article>
+            {% endfor %}
+        </main>
+
+    {% endblock %}
